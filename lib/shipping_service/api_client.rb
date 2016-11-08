@@ -7,7 +7,23 @@ module ShippingService::APIClient
     {id: 4, name: "FedEx 2 Day", cost: 68.46},
   ]
 
+  ### DATA_FROM_API ###
+  # [ {id: id, name: Carrier + Service, cost: cost} ]
+
+  # DIMENSIONS = [12.0, 12.0, 12.0]
+  # COUNTRY = "US"
+
+
   def methods_for_order(order)
+    # Call shipping_service with:
+    # order's weight -- calculated somehow -- new method:
+    # DIMENSIONS
+    # COUNTRY
+    # order.city
+    # order.state
+    # order.billing_zip
+    #
+
     # The real implementation should use the order's
     # shipping details, calculate the weight of every
     # product in the order, and send that info to the API

@@ -18,6 +18,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'httparty'
+
 ### DATABASE ###
 # Use postgresql as the database for Active Record in production only
 gem 'pg', '~> 0.15', group: :production
@@ -32,6 +34,9 @@ gem 'omniauth-github'
 group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-byebug'
+  gem 'pry-rails'
+  gem 'minitest-vcr'
+  gem 'webmock'
 end
 
 group :development do
@@ -46,4 +51,5 @@ end
 
 group :test do
   gem 'simplecov', :require => false
+  gem 'minitest-reporters'
 end

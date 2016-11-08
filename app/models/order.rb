@@ -2,7 +2,7 @@ class Order < ActiveRecord::Base
   has_many :orderitems
   belongs_to :user
 
-  # If must have both a shipping_name and a shipping_cost, or neither
+  # It must have both a shipping_name and a shipping_cost, or neither
   validates :shipping_name, presence: true, if: -> (order) { order.shipping_cost.present? }
   validates :shipping_cost, presence: true, if: -> (order) { order.shipping_name.present? }
 
